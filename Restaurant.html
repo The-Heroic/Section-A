@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>beingWell | Healthy Restaurant</title>
+  <style>
+    :root {
+      --brand: #0f766e;
+      --brand-dark: #115e59;
+      --accent: #84cc16;
+      --bg: #f6f8f7;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --ring: #a7f3d0;
+    }
+    * { box-sizing: border-box; } 
+    html, body {
+      margin: 0; padding: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text); background: var(--bg); line-height: 1.6;
+    }
+
+    
+    header {
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      color: #fff;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 1080px; margin: 0 auto; padding: 0 16px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: #fff; display: grid; place-items: center; color: var(--brand);
+      font-weight: 700; letter-spacing: 0.5px;
+    }
+    nav {
+      margin-top: 12px;
+    }
+    .nav-list {
+      display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; 
+    }
+    .nav-list a {
+      color: #e6fffb; text-decoration: none; padding: 6px 10px; border-radius: 6px;
+    }
+    .nav-list a:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .hero {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; 
+      padding: 28px 0;
+    }
+    .hero h1 { margin: 0 0 10px; font-size: clamp(1.8rem, 3.2vw, 2.4rem); }
+    .hero p { margin: 0; color: var(--muted); }
+    .hero img {
+      width: 100%; height: 260px; object-fit: cover; border-radius: 12px; 
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    section {
+      padding: 24px 0;
+    }
+    h2 {
+      margin: 0 0 10px; font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+      color: var(--brand-dark);
+    }
+    .card {
+      background: var(--card); border-radius: 12px; padding: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .menu-list {
+      display: grid; gap: 12px; margin: 0; padding: 0; list-style: none;
+    }
+    .menu-item {
+      display: flex; justify-content: space-between; align-items: start; gap: 12px; 
+      padding: 12px; border: 1px solid #e5e7eb; border-radius: 10px; background: #fff;
+    }
+    .item-left { display: flex; gap: 12px; align-items: center; }
+    .menu-thumb {
+      width: 64px; height: 64px; border-radius: 8px; object-fit: cover;
+    }
+    .item-title { font-weight: 600; }
+    .nutri {
+      color: var(--muted); font-size: 0.95rem;
+    }
+    .price { font-weight: 700; color: var(--brand-dark); }
+
+    table {
+      width: 100%; border-collapse: collapse; 
+    }
+    th, td {
+      border: 1px solid #e5e7eb; padding: 10px; text-align: left; 
+      vertical-align: top;
+    }
+    thead th {
+      position: sticky; top: 0; background: #f9fafb; z-index: 1;
+    }
+
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .contact a { color: var(--brand-dark); text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 24px; background: #0b3f3a; color: #c7fff5; padding: 16px;
+    }
+    .small { color: #b0c4be; font-size: 0.9rem; }
+
+    a:focus, button:focus, [tabindex]:focus {
+      outline: 2px solid transparent; box-shadow: 0 0 0 3px var(--ring); 
+    }
+
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo" aria-label="beingWell logo">BW</div>
+        <div>
+          <h1 style="margin:0;">beingWell</h1>
+          <p style="margin:0;" class="small">Protein-forward, nutrient-dense meals made fresh daily</p>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#table">Nutrition Table</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#findus">Find us</a></li>
+          <li><a href="https://maps.google.com" target="_blank" rel="noopener">Map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="gallery">
+      <div>
+        <h2>Eat clean, feel great</h2>
+        <p>Balanced bowls, lean proteins, whole grains, and seasonal produce for everyday energy.</p>
+      </div>
+      <img src="Quinoa-bowl.png" alt="Colorful quinoa bowl with grilled chicken and mixed greens">
+    </section>
+
+    <section id="menu">
+      <h2>Signature Menu</h2>
+      <div class="card">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="item-left">
+              <img class="menu-thumb" src="grilled-chicken-bowl.jpg" alt="Grilled chicken bowl with quinoa and veggies">
+              <div>
+                <div class="item-title">Grilled Chicken Power Bowl <span class="small">• GF</span></div> 
+                <div class="nutri">~42g protein • quinoa, chickpeas, kale, tahini-lemon</div>
+              </div>
+            </div>
+            <div class="price">₹320</div>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-left">
+              <img class="menu-thumb" src="salmon-bento.jpeg" alt="Baked salmon with brown rice and broccoli">
+              <div>
+                <div class="item-title">Omega Salmon Bento <span class="small">• Omega-3</span></div>
+                <div class="nutri">~36g protein • brown rice, broccoli, sesame-ginger</div>
+              </div>
+            </div>
+            <div class="price">₹450</div>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-left">
+              <img class="menu-thumb" src="tofu-bowl.png" alt="Crispy tofu with edamame and soba noodles">
+              <div>
+                <div class="item-title">Crispy Tofu Greens Bowl <span class="small">• Vegan</span></div>
+                <div class="nutri">~28g protein • soba, edamame, spinach, miso-lime</div>
+              </div>
+            </div>
+            <div class="price">₹280</div>
+          </li>
+
+          <li class="menu-item">
+            <div class="item-left">
+              <img class="menu-thumb" src="egg-wrap.png" alt="Egg white wrap with cottage cheese and spinach">
+              <div>
+                <div class="item-title">High-Protein Egg Wrap <span class="small">• Low-carb</span></div>
+                <div class="nutri">~30g protein • paneer, spinach, tomato-chili salsa</div>
+              </div>
+            </div>
+            <div class="price">₹210</div>
+          </li>
+        </ul>
+      </div>
+      <p class="small">Protein values are approximate; actual values may vary by portion and seasonal ingredients.</p>
+    </section>
+
+    <section id="table">
+      <h2>Nutrition Table</h2>
+      <div class="card">
+        <table aria-describedby="nutrition-note">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Protein</th>
+              <th>Key Nutrients</th>
+              <th>Calories</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Grilled Chicken Power Bowl</td>
+              <td>~42 g</td>
+              <td>Iron, B6, Fiber, Healthy fats</td>
+              <td>~560</td>
+            </tr>
+            <tr>
+              <td>Omega Salmon Bento</td>
+              <td>~36 g</td>
+              <td>Omega-3, B12, Selenium</td>
+              <td>~520</td>
+            </tr>
+            <tr>
+              <td>Crispy Tofu Greens Bowl</td>
+              <td>~28 g</td>
+              <td>Calcium, Iron, Fiber</td>
+              <td>~480</td>
+            </tr>
+            <tr>
+              <td>High-Protein Egg Wrap</td>
+              <td>~30 g</td>
+              <td>Calcium, Folate</td>
+              <td>~390</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="nutrition-note" class="small">Nutrients based on standard recipes; ask staff for allergen details.</p>
+      </div>
+    </section>
+
+    <section id="findus">
+      <h2>Location & Contact</h2>
+      <div class="contact-grid">
+        <div class="card contact">
+          <h3 style="margin-top:0;">beingWell Café</h3>
+          <p>21 Wellness Street, Sector 11, Bengaluru, KA 560001</p>
+          <p><span>Open:</span> Mon–Sat 8:00–21:30 • Sun 9:00–20:00</p>
+          <p>Phone: <a href="tel:+911234567890">+91 8960285533</a></p>
+          <p>Email: <a href="mailto:akanuragkumar1112202@gmail.com">akanuragkumar1112202@gmail.com</a></p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">Find us</h3>
+          <p>View on <a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a> or message on WhatsApp for pickup instructions.</p>
+          <img src="cafe-front.png" alt="beingWell café storefront with outdoor seating" style="width:100%; height:200px; object-fit:cover; border-radius:10px;">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="margin:0;">© 2025 beingWell • Healthy Restaurant & Café</p>
+      <p style="margin:4px 0 0;" class="small">Crafted with whole foods, lean proteins, and seasonal produce.</p>
+    </div>
+  </footer>
+</body>
+</html>
