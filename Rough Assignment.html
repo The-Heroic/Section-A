@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligned Content (HTML Attributes Only)</title>
+</head>
+<body>
+
+    <header>
+        <center>
+            <h1>Content Alignment Demonstration (No CSS)</h1>
+        </center>
+    </header>
+
+    <hr>
+
+    <h2>Paragraph Alignment</h2>
+
+    <p align="left">
+        This paragraph uses the **left** alignment, which is the default for most text and generally the best for readability.
+    </p>
+
+    <p align="center">
+        This paragraph uses the **center** alignment attribute. This was often used for titles or short messages.
+    </p>
+
+    <p align="right">
+        This paragraph uses the **right** alignment attribute.
+    </p>
+
+    <p align="justify">
+        This paragraph demonstrates the **justify** alignment. Justified text stretches the lines to align with both the left and right margins. In older browsers, the effect might be less precise than with modern CSS. For this effect to be visible, the paragraph should contain enough text to wrap across multiple lines. This is a common requirement when trying to replicate newspaper layouts.
+    </p>
+
+    <hr>
+
+    <h2>Image Alignment</h2>
+
+    <p>
+        <img src="https://via.placeholder.com/150?text=Left+Image" alt="A left-aligned placeholder image" align="left" hspace="10" vspace="10">
+        This paragraph contains an image that is aligned to the **left** using the `align="left"` attribute on the `<img>` tag. The text wraps around the image, which was the standard way to achieve a text-wrap layout without CSS. The `hspace` and `vspace` attributes are used here to add horizontal and vertical space (margin) around the image, preventing the text from touching it.
+    </p>
+    <br clear="left"> <p>
+        <img src="https://via.placeholder.com/150?text=Right+Image" alt="A right-aligned placeholder image" align="right" hspace="10" vspace="10">
+        Here is another paragraph with an image that is aligned to the **right** using `align="right"`. Note that the subsequent paragraph text will continue to flow around the image until the image's height is exceeded.
+    </p>
+    <br clear="right"> <hr>
+
+    <h2>Centered Hyperlinks</h2>
+
+    <center>
+        <p>
+            These **hyperlinks** are centered because the surrounding `<p>` tag is inside the **deprecated `<center>` tag**:
+        </p>
+        <a href="https://www.google.com" target="_blank">Visit Google</a> |
+        <a href="#top">Back to Top of Page</a> |
+        <a href="mailto:example@domain.com">Email Us</a>
+    </center>
+
+    <footer>
+        <hr>
+        <center>
+            <p>Page created using only old HTML attributes.</p>
+        </center>
+    </footer>
+
+</body>
+</html>
