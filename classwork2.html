@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+   Multimedia Video, Audio, Youtube
+-->
+    <video width="320" height="240" controls>
+        <source src="Bob.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+<br><br>
+    <audio controls>
+        <source src="RD.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+<br><br>
+    <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
+
+<br><br>
+
+<!--
+   Hyperlinks
+-->
+    <a href="https://www.w3schools.com/" target="_blank" title="Go to W3schools Html section">Visit W3Schools.com! </a>
+
+<br><br>
+
+<!--
+    Tables
+-->
+
+
+<table border="1px">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Stock Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Laptop</td>
+            <td>$999</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>$25</td>
+            <td>Out of Stock</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<br>
+<!--
+Forms
+-->
+
+<form action="/submit-data" method="POST">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="name@example.com">
+    <br>
+    <br>
+    
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" name="feedback"></textarea>
+    
+    <button type="submit">Send</button>
+</form>
+
+<br>
+<br>
+
+<!--
+Lists
+-->
+<h3>Recipe Steps</h3>
+<ol>
+    <li>Preheat the oven.</li>
+    <li>Mix ingredients.</li>
+    <li>Bake for 30 minutes.</li>
+</ol>
+
+<h3>Ingredients</h3>
+<ul>
+    <li>Flour</li>
+    <li>Sugar</li>
+    <li>Eggs</li>
+</ul>
+
+
+</body>
+</html>
